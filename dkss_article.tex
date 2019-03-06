@@ -151,7 +151,7 @@
 %% \dochead can also be used to include a conference title, if directed by the editors
 %% e.g. \dochead{17th International Conference on Dynamical Processes in Excited States of Solids}
 
-\title{METHODS OF SYMBOLIC REGRESSION FOR THE SEARCH FOR STRUCTURES OF MATHEMATICAL EXPRESSIONS}
+\title{Symbolic Regression Methods For The Mathematical Expressions Structure Search}
 
 %% use optional labels to link authors explicitly to addresses:
 %% \author[label1,label2]{<author name>}
@@ -160,12 +160,13 @@
 
 
 
-\author[a]{First Author}
-\author[b]{Second Author}
-\author[a,b]{Third Author\corref{cor1}}
+\author[a,b]{Askhat Diveev}
+\author[b]{David Kazaryan\corref{cor1}}
+\author[a]{Elizaveta Shmalko}
+\author[a]{Elena Sofronova}
 
-\address[a]{First affiliation, Address, City and Postcode, Country}
-\address[b]{Second affiliation, Address, City and Postcode, Country}
+\address[a]{Dorodnicyn Computing Centre of RAS, Vavilov st. 40, 119333 Moscow, Russia}
+\address[b]{RUDN University, Miklukho-Maklaya str. 6, 117198 Moscow, Russia}
 
 \begin{abstract}
 %% Text of abstract
@@ -183,11 +184,11 @@ Type your keywords here, separated by semicolons ;
 %% or \MSC[2008] code \sep code (2000 is the default)
 
 \end{keyword}
-\cortext[cor1]{Corresponding author. Tel.: +0-000-000-0000 ; fax: +0-000-000-0000.}
+\cortext[cor1]{Corresponding author. Tel.: +7-(926)-563-48-32.}
 \end{frontmatter}
 
 %\correspondingauthor[*]{Corresponding author. Tel.: +0-000-000-0000 ; fax: +0-000-000-0000.}
-\email{author@institute.xxx}
+\email{kazaryan\_de@rudn.university}
 
 %%
 %% Start line numbering here if you want
@@ -198,6 +199,30 @@ Type your keywords here, separated by semicolons ;
 %% main text
 
 %\enlargethispage{-7mm}
+
+\section{General features of symbolic regression}
+
+Every known symbolic regression methods has two main parts: the way of function encoding and the search algorithm. Most symbolic regression methods use population-based methods such as genetic algorithm as a search engine. Each symbolic regression method defines its own transformation operations like mutation and crossover.
+
+Symbolic regression methods construct complex functions as a composition of nested elementary functions. Properties of a desired function built on compositions depend on a set of basic elementary functions. Let's consider the properties of superimposed functions. 
+
+\subsection{Composition of functions}
+
+Consider a set of functions with no more than $M$ arguments:
+\begin{equation}
+    F = \left\{ f_{1,1}(z), \ldots, f_{1,n_1}(z), f_{2,1}(z_1, z_2), \ldots f_{2, n_2}(z_1, z_2), \ldots, f_{M,1}(z_1,\ldots,z_M), \ldots, f_{M,n_M}(z_1, \ldots, z_M)  \right\}.
+    \label{eq:set_of_fs}
+\end{equation}
+
+We can also define a separate set of variables and constants (zero-argument functions):
+
+\begin{equation}
+    F_0 = \left\{ q_1, \ldots, q_P, x_1, \ldots, x_N  \right\}.
+    \label{eq:set_of_f0}
+\end{equation}
+
+
+
 \section{Main Text}
 \label{main}
 
